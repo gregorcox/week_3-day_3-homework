@@ -25,11 +25,17 @@ class Album
     SqlRunner.run(sql)
   end
 
-  def customer()
-    sql = "SELECT * FROM customers WHERE id = $1"
+  def list_artists()
+    sql = "SELECT * FROM artists WHERE id = $1"
     values = [@customer_id]
     customer = SqlRunner.run(sql, values).first
     return Customer.new(customer)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM albums"
+    albums = SqlRunner.run(sql)
+    return albums.map { |album| Album.new(album) }
   end
 
 end
