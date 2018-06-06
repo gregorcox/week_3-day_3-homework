@@ -10,13 +10,17 @@ artist1 = Artist.new({
   })
 artist1.save()
 artist1.update()
+# artist1.delete()
 
 album1 = Album.new({
   'artist_id' => artist1.id,
-  'title' => 'codeclan',
-  'genre' => 'rock'
+  'title' => 'new_album',
+  'genre' => 'jazz'
   })
   album1.save()
+  
+
+
 
 
 
