@@ -9,8 +9,6 @@ artist1 = Artist.new({
   'name' => 'Tony'
   })
 artist1.save()
-artist1.update()
-# artist1.delete()
 
 album1 = Album.new({
   'artist_id' => artist1.id,
@@ -18,11 +16,6 @@ album1 = Album.new({
   'genre' => 'jazz'
   })
   album1.save()
-  
-
-
-
-
-
+   
 binding.pry
 nil
