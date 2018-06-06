@@ -29,4 +29,6 @@ class Artist
     return artists.map { |artist| Artist.new(artist) }
   end
 
+  
+
 end
