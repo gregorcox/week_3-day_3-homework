@@ -6,9 +6,10 @@ Album.delete_all()
 Artist.delete_all()
 
 artist1 = Artist.new({
-  'name' => 'Zsolt'
+  'name' => 'Tony'
   })
 artist1.save()
+artist1.update()
 
 album1 = Album.new({
   'artist_id' => artist1.id,
